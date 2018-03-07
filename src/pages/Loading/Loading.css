@@ -1,0 +1,29 @@
+@-webkit-keyframes Loading-Logo {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+.loading-page-container {
+    display: grid;
+    grid-template-rows: .5fr 2fr .5fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100vh;
+    width: 100vw;
+    background-color: #27AAE1;
+    grid-template-areas: 
+    '. . .'
+    '. logo-area .'
+    '. . .';
+}
+
+.logo-container {
+    grid-area: logo-area;
+    justify-self: center;
+    align-self: center;
+}
+
+.logo {
+    animation-fill-mode: forwards;
+    -webkit-animation: Loading-Logo ease-in-out 5s;
+}
