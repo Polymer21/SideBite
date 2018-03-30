@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {BrowserRouter as Router, Redirect} from 'react-router-dom'
+import {BrowserRouter as Router, Redirect, Link} from 'react-router-dom'
 import './Home.css' 
 import Bite from './Bite.png'
 import In from './In.png'
@@ -36,8 +36,10 @@ class Home extends Component {
                  <img src={Logo} className='home-logo'/>
                  <img src={Bite} className='bite'/>
                  <img src={In} className='in'/>
-                    <div className='about' onClick={this.handleClick}>
-                    </div>
+                 <Link path to='/passion' className='about'>
+                    {/* <div className='about' onClick={this.handleClick}>
+                    </div> */}
+                </Link>
                      <p className='about-words'>What's SideBite Passionate about?</p>
                  <div className='unique'>
                      Uniquely
